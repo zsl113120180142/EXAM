@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lixp.exam.dao.ExamRoomInfoMapper">
+  <resultMap id="BaseResultMap" type="com.lixp.exam.bean.ExamRoomInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="erid" jdbcType="INTEGER" property="erid" />
+    <result column="rid" jdbcType="INTEGER" property="rid" />
+    <result column="eno" jdbcType="VARCHAR" property="eno" />
+    <result column="er_No" jdbcType="VARCHAR" property="erNo" />
+    <result column="course" jdbcType="VARCHAR" property="course" />
+  </resultMap>
+</mapper>

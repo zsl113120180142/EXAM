@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lixp.exam.dao.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.lixp.exam.bean.Student">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="sid" jdbcType="INTEGER" property="sid" />
+    <result column="s_cert_no" jdbcType="VARCHAR" property="sCertNo" />
+    <result column="s_name" jdbcType="VARCHAR" property="sName" />
+    <result column="s_sex" jdbcType="INTEGER" property="sSex" />
+    <result column="s_card_type" jdbcType="VARCHAR" property="sCardType" />
+    <result column="s_card_no" jdbcType="VARCHAR" property="sCardNo" />
+    <result column="erid" jdbcType="INTEGER" property="erid" />
+    <result column="s_room_no" jdbcType="VARCHAR" property="sRoomNo" />
+    <result column="s_pic" jdbcType="VARCHAR" property="sPic" />
+    <result column="eid" jdbcType="INTEGER" property="eid" />
+    <result column="eno" jdbcType="VARCHAR" property="eno" />
+    <result column="s_status" jdbcType="INTEGER" property="sStatus" />
+    <result column="course" jdbcType="VARCHAR" property="course" />
+    <result column="s_school" jdbcType="VARCHAR" property="sSchool" />
+    <result column="s_college" jdbcType="VARCHAR" property="sCollege" />
+    <result column="s_subject" jdbcType="VARCHAR" property="sSubject" />
+    <result column="s_class" jdbcType="VARCHAR" property="sClass" />
+    <result column="s_student_no" jdbcType="VARCHAR" property="sStudentNo" />
+    <result column="s_uuid" jdbcType="VARCHAR" property="sUuid" />
+  </resultMap>
+</mapper>

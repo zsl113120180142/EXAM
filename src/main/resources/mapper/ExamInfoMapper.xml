@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lixp.exam.dao.ExamInfoMapper">
+  <resultMap id="BaseResultMap" type="com.lixp.exam.bean.ExamInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="eid" jdbcType="INTEGER" property="eid" />
+    <result column="eno" jdbcType="VARCHAR" property="eno" />
+    <result column="e_name" jdbcType="VARCHAR" property="eName" />
+    <result column="e_sessions" jdbcType="VARCHAR" property="eSessions" />
+    <result column="e_data" jdbcType="DATE" property="eData" />
+    <result column="e_start_time" jdbcType="TIME" property="eStartTime" />
+    <result column="e_end_time" jdbcType="TIME" property="eEndTime" />
+    <result column="e_status" jdbcType="INTEGER" property="eStatus" />
+    <result column="e_sign_start_time" jdbcType="TIMESTAMP" property="eSignStartTime" />
+    <result column="e_sign_end_time" jdbcType="TIMESTAMP" property="eSignEndTime" />
+    <result column="e_loc_name" jdbcType="VARCHAR" property="eLocName" />
+  </resultMap>
+</mapper>

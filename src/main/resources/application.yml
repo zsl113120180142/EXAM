@@ -1,0 +1,58 @@
+spring:
+  jackson:
+    locale: zh
+    time-zone: GMT+8
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/exam?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 1000MB        #上传文件大小
+      max-request-size: 1000MB     #下载文件大小
+
+mybatis:
+  #mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.lixp.exam.bean  # 注意：对应实体类的路径
+  configuration:
+    map-underscore-to-camel-case: true  # 开启驼峰命名
+# 分页插件的配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+#  pagehelper.returnPageInfo: check
+
+mapper:
+  mappers: com.lixp.exam.utils.MyMapper
+  identity: MYSQL
+server:
+  port: 8080
+  servlet:
+    context-path: /EXAM
+exam:
+  jwt:
+    publicKeyFilename: C:\exam\PubPri\rsa.pub    #公钥路径
+    privateKeyFilename: C:\exam\PubPri\rsa.pri   #私钥路径
+    secret: aff23$_               #盐值
+    expireMinutes: 1024             #过期时间，单位分钟
+    cookieName: USERTOKEN         #从此cookie中获取jwt令牌
+  picture:
+    url: C:/exam/image/stupic/     #图片保存的路径
+    cardPicUrl: C:/exam/image/stucard/  #
+    cardPdfUrl: C:/exam/image/stucard/  #pdf保存路径
+    ip: 192.168.43.11 #图片服务器的ip地址
+  allowUrl:         #不需要权限的接口
+    - /userRegister
+    - /sendCodeEmail
+    - /downLoadStuPdf
+    - /exportExamExcel
+    - /exportNote
+  email:
+    address: 1377623290@qq.com     #发送者邮箱
+    authorizationCode: xrpazvjtzybcgbaf   #授权码
+    expirationTime: 120     #邮箱验证码过期时间
+
